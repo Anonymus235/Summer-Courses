@@ -7,14 +7,13 @@ document.getElementById('send-btn').addEventListener("click",()=>{
     movieBossText.innerText = 'Ok,just wait a second while my digital brain digests that ...'
     fetchBotReply(setupTextarea.value)
 })
-// const apiKey = ("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")
 const url = "https://api.openai.com/v1/completions"
 function fetchBotReply(value){
     fetch(url,{
         method:'POST',
         headers:{
             'Content-Type':'application/json',
-            'Authorization':'Bearer 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 '
+            'Authorization':'Bearer apiKey '
         },
         body:JSON.stringify({
             'model':'text-davinci-003',
